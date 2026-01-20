@@ -1,0 +1,128 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2em;
+    color: #eee;
+    background-color: #222;
+    letter-spacing: .2px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: serif;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2.5em;
+    border-bottom: 2px solid #555;
+    padding-bottom: 0.2em;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.8em;
+    border-bottom: 1px solid #555;
+    padding-bottom: 0.2em;
+}
+
+h3 {
+    font-size: 1.4em;
+    color: #ddd;
+}
+
+blockquote {
+    border-left: 4px solid #4daafc;
+    margin: 0;
+    padding-left: 1em;
+    color: #ccc;
+    background-color: #444;
+    padding: 1em;
+    border-radius: 4px;
+}
+
+code {
+    background-color: #222;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: "Consolas", "Monaco", monospace;
+    font-size: 0.9em;
+    color: #ffd700;
+    /* Gold for code to pop */
+}
+
+pre {
+    background-color: #222;
+    padding: 1em;
+    overflow-x: auto;
+    border-radius: 4px;
+    border: 1px solid #444;
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0;
+    color: #eee;
+}
+
+a {
+    color: #4daafc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #80c4fc;
+}
+
+ul,
+ol {
+    padding-left: 2em;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+strong {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Page break for printing */
+@media print {
+    body {
+        background-color: #333 !important;
+        /* Force background print */
+        color: #eee !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    h1 {
+        page-break-before: always;
+    }
+
+    /* Don't break before the first title */
+    body>h1:first-of-type {
+        page-break-before: auto;
+    }
+
+    h2 {
+        page-break-after: avoid;
+    }
+
+    /* Ensure dark background covers the whole page during print */
+    html {
+        background-color: #333;
+    }
+}
